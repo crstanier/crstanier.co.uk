@@ -1,0 +1,30 @@
+{%include "head.twig" %}
+
+<div class="col-md-12">
+	<h1>{{ meta.title }}</h1>
+</div>
+
+        	<div class="col-md-5">
+        		
+        		<p>To the right you can find the various articles I have written. I like to explore a variety of topics that interest me including technology, business, management and general geekery.</p>
+        	
+        	</div>
+        	<div class="col-md-6 col-md-offset-1 article">
+        		
+        		<ul class="article-list list-unstyled">
+        		{% for page in pages if page.author == "Journal" %}
+        		
+        			{% if page.date %}
+        			<li>
+						<i class="fa fa-chevron-right fa-bullet text-primary" aria-hidden="true"></i>
+						<a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+						<span class="text-primary">{{ page.date | date("Y-m-d") }}</span>
+					</li>	
+					{% endif %}
+					
+				{% endfor %}
+				</ul>
+        		
+        	</div>
+
+{%include "foot.twig" %}

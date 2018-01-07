@@ -1,0 +1,56 @@
+{%include "head.twig" %}
+
+<article>
+	
+	<h1>{{ meta.title }}</h1>
+
+	<header class="grid_4">
+	
+	
+	
+
+	
+	<p class="summary">{{ meta.summary }}</p>
+	
+	<div class="rating">{% if meta.rating == "5" %}
+						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						{% endif %}	
+						{% if meta.rating == "4" %}
+						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star no-star"></i>
+						{% endif %}	
+						{% if meta.rating == "3" %}
+						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+						{% endif %}	
+						{% if meta.rating == "2" %}
+						<i class="fa fa-star"><i class="fa fa-star"></i>
+						{% endif %}	
+						{% if meta.rating == "1" %}
+						<i class="fa fa-star">
+						{% endif %}	
+	</div>						
+
+
+	<span class="date">
+		<i class="fa fa-calendar-o"> Finished reading </i> {{ meta.date }}<br />
+		<i class="fa fa-pencil"> {{ meta.bookauthor }}</i><br />
+		<i class="fa fa-shopping-cart"></i> <a href="http://www.amazon.co.uk/gp/product/{{ meta.bookproductid }}/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN={{ meta.bookproductid }}&linkCode=as2&tag=crstaniercouk-21&linkId={{ meta.booklink }}">Buy On Amazon</a>
+	</span>
+
+
+		<a href="http://www.amazon.co.uk/gp/product/{{ meta.bookproductid }}/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN={{ meta.bookproductid }}&linkCode=as2&tag=crstaniercouk-21&linkId={{ meta.booklink }}">
+	<img border="0" src="http://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN={{ meta.bookproductid }}&Format=_SL250_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=crstaniercouk-21" ></a>
+	<img src="http://ir-uk.amazon-adsystem.com/e/ir?t=crstaniercouk-21&l=as2&o=2&a={{ meta.bookproductid }}" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+	
+	<p class="minor">I would love to hear your thoughts, comments and insights about this article. You can get in touch with me through any of the options on the <a href="/contact">Contact Page</a>.</p>
+	</header>
+	<main class="grid_7 main-content">
+
+	{{ content }}
+	
+	<p>Sound good? View on <a href="http://www.amazon.co.uk/gp/product/{{ meta.bookproductid }}/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN={{ meta.bookproductid }}&linkCode=as2&tag=crstaniercouk-21&linkId={{ meta.booklink }}">Amazon</a>.</p>
+
+
+	</main>
+</article>
+
+{%include "foot.twig" %}

@@ -1,0 +1,48 @@
+{%include "head.twig" %}
+
+<h1>{{ meta.title }}</h1>
+
+        	<div class="grid_5">
+        		
+        		<p class="exec-summary">
+        			My name is Curtis Stanier. I am a graduate of the University of Manchester.
+        		</p>
+				<p class="exec-summary">
+					I love technology and all things digital. I like finding and learning about ways that businesses can use technology to improve their operations.
+				</p>
+				
+				<ul class="synopsis">
+					<li class="university">
+						Graduate of
+						<span>The University of Manchester</span>
+					</li>
+					<li class="job">
+						Working as
+						<span>{{ meta.occupation }}</span>
+					</li>
+					<li class="location">
+						Living In
+						<span>{{ meta.location }}</span>
+					</li>
+					<li class="reading">
+						Currently Reading
+						<span>{{ meta.reading }}</span>
+					</li>
+					<li class="interests">
+						Interested in
+						<span>Technology, Business, Management, Rugby, Snowboarding, Design, Customer Service</span>
+					</li>
+				</ul>
+				
+				<p class="minor">Want to know more? Feel free to get in touch using any of the methods on the <a href="">Contact Page</a>.</p>
+
+				{%include "social.html" %}
+        	
+        	</div>
+        	<div class="grid_6 main-content">
+        	
+        		{{ content }}
+        		
+        	</div>
+
+{%include "foot.twig" %}

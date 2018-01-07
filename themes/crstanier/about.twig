@@ -1,0 +1,54 @@
+{%include "head.twig" %}
+
+<div class="col-md-12">
+	<h1>{{ meta.title }}</h1>
+</div>
+
+        	<div class="col-md-4">
+        		
+        		<p class="lead">
+        			My name is Curtis Stanier. I am a graduate of the University of Manchester.
+        		</p>
+				<p class="lead">
+					I love technology and all things digital. I like finding and learning about ways that businesses can use technology to improve their operations.
+				</p>
+				
+				<ul class="list-unstyled synopsis">
+					<li class="university">
+						<i class="fa fa-graduation-cap fa-icon" aria-hidden="true"></i>
+						<span class="text-muted small">Graduate of</span><br />
+						<span>The University of Manchester</span>
+					</li>
+					<li class="job">
+						<i class="fa fa-briefcase fa-icon" aria-hidden="true"></i>
+						<span class="text-muted small">Working as</span><br />
+						<span>{{ meta.occupation }}</span>
+					</li>
+					<li class="location">
+						<i class="fa fa-map-marker fa-icon" aria-hidden="true"></i>
+						<span class="text-muted small">Living In</span><br />
+						<span>{{ meta.location }}</span>
+					</li>
+					<li class="reading">
+						<i class="fa fa-book fa-icon" aria-hidden="true"></i>
+						<span class="text-muted small">Currently Reading</span><br />
+						<span>{{ meta.reading }}</span>
+					</li>
+					<li class="interests">
+						<i class="fa fa-thumbs-o-up fa-icon" aria-hidden="true"></i>
+						<span class="text-muted small">Interested in</span><br />
+						<span>Technology, Business, Management, Rugby, Snowboarding, Design, Customer Service</span>
+					</li>
+				</ul>
+				
+				<p class="text-muted">Want to know more? Feel free to get in touch using any of the methods on the <a href="">Contact Page</a>.</p>
+
+        	
+        	</div>
+        	<div class="col-md-7 col-md-offset-1 article">
+        	
+        		{{ content }}
+        		
+        	</div>
+
+{%include "foot.twig" %}

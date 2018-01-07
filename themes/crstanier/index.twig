@@ -1,0 +1,35 @@
+{%include "head.twig" %}
+
+<article>
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <h1>{{ meta.title }}</h1>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <main class="col-md-7 article">
+
+            {{ content }}
+
+        </main>
+
+        <header class="col-md-offset-1 col-md-4">
+
+            <p class="">{{ meta.summary }}</p>
+
+            <p class="text-primary"><i class="fa fa-calendar-o"></i> {{ meta.date }}</p>
+
+            <p class="small">I would love to hear your thoughts, comments and insights about this article. You can get in touch with me through any of the options on the <a href="/contact">Contact Page</a>.</p>
+        </header>
+
+    </div>
+
+</article>
+
+{%include "foot.twig" %}

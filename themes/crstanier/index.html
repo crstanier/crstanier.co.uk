@@ -1,0 +1,23 @@
+{%include "head.twig" %}
+
+<article>
+	
+	<h1>{{ meta.title }}</h1>
+
+	<header class="grid_4">
+	
+	<p class="summary">{{ meta.summary }}</p>
+
+	<span class="date"><i class="fa fa-calendar-o"></i> {{ meta.date }}</span>
+
+	<p class="minor">I would love to hear your thoughts, comments and insights about this article. You can get in touch with me through any of the options on the <a href="/contact">Contact Page</a>.</p>
+	</header>
+	<main class="grid_7 main-content">
+
+	{{ content }}
+
+
+	</main>
+</article>
+
+{%include "foot.twig" %}

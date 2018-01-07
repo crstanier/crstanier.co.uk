@@ -1,0 +1,27 @@
+{%include "head.twig" %}
+
+<h1>{{ meta.title }}</h1>
+
+        	<div class="grid_5">
+        		
+        		<p>To the right you can find the various articles I have written. I like to explore a variety of topics that interest me including technology, business, management and general geekery.</p>
+        	
+        	</div>
+        	<div class="grid_6 main-content">
+        		
+        		<ul class="article-list">
+        		{% for page in pages if page.author == "Journal" %}
+        		
+        			{% if page.date %}
+        			<li>
+						<a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+						<span class="date">{{ page.date_formatted }}</span>
+					</li>	
+					{% endif %}
+					
+				{% endfor %}
+				</ul>
+        		
+        	</div>
+
+{%include "foot.twig" %}

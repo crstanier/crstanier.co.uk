@@ -1,0 +1,34 @@
+<footer>
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 text-center">
+            {% for social in meta.social %}
+                <a href="{{ social.url }}" title="{{ social.title }}"><span class="icon-{{ social.icon }}"></span></a>
+            {% endfor %}
+
+            <ul class="list-unstyled list-inline">
+
+                <li><a class="soc-twitter" href="https://twitter.com/crstanier"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="soc-linkedin" href="https://uk.linkedin.com/in/cstanier"><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="soc-youtube" href="https://www.youtube.com/user/crstanier"><i class="fa fa-youtube"></i></a></li>
+                <li><a class="soc-youtube soc-icon-last" href="https://github.com/crstanier"><i class="fa fa-github"></i></a></li>
+            </ul>
+
+            <p class="small"><i class="fa fa-copyright" aria-hidden="true"></i> {{ "now"|date("Y") }} Curtis Stanier<p>
+
+
+        </div>
+    </div>
+
+</footer>
+
+</div><!-- /.container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="{{ theme_url }}/js/bootstrap.min.js"></script>
+</body>
+</html>
